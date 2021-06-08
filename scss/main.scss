@@ -1,0 +1,383 @@
+/*Variables*/
+
+$colorPrincipal: #111f4d;
+$colorSecundario: #f2f4f7;
+
+$tamanioImagen: (
+  #index: 300px,
+  #servidores: 300px,
+  #pc: 600px,
+  #electro: 400px
+);
+
+@each $section, $tamanio in $tamanioImagen{
+  #{$section} .introTitulo{
+    height: $tamanio;
+  }
+}
+
+.col-3 {
+  max-width: 90% !important;
+  width: auto !important;
+  flex: 0 0 100% !important;
+
+}
+
+.header--clear {
+  clear: both;
+}
+
+.navbar-dark {
+  background-color: $colorPrincipal !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Anonymous Pro', monospace;
+}
+
+.footer__img{
+  width: 30px;
+  height: 30px;
+}
+
+main {
+  background: rgb(17, 31, 77);
+  background: linear-gradient(0deg, rgba(17, 31, 77, 1) 0%, rgba(242, 244, 247, 1) 100%);
+}
+
+.grid-container-footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 15px;
+  grid-template-areas:
+        "Instagram"
+        "WhatsApp"
+        "Facebook";
+}
+
+.Instagram {
+  grid-area: Instagram;
+}
+
+.WhatsApp {
+  grid-area: WhatsApp;
+}
+
+.Facebook {
+  grid-area: Facebook;
+}
+
+.grid-container-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+        "Logo Logo Logo"
+        "Inicio Servicios Contacto";
+}
+
+.Logo {
+  grid-area: Logo;
+  width: 350px;
+}
+
+.Inicio {
+  grid-area: Inicio;
+}
+
+.Servicios {
+  grid-area: Servicios;
+}
+
+.Contacto {
+  grid-area: Contacto;
+}
+
+header {
+  background-color: $colorSecundario;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  font-size: 1rem;
+}
+
+header span {
+  display: block;
+  margin-top: 3px;
+}
+
+footer {
+  background-color: $colorSecundario;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+footer a:link {
+  color: black;
+  padding-right: 50px;
+}
+
+footer a:visited {
+  color: black;
+}
+
+.row{
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.articulo{
+  text-align: center;
+  margin: 20px auto;
+  padding-top: 10px;
+  border-radius: 25px;
+  background-color: $colorSecundario;
+  display: block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+
+.articulo:hover,
+.articulo:focus,
+.articulo:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.2);
+}
+
+.articulo__titulo{
+  color: black;
+  font-weight: bolder;
+}
+
+.articulo__parrafo{
+  color: black;
+}
+
+#video {
+  text-align: center;
+}
+
+.cajaBoton {
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+}
+
+/* ESTILO INDEX */
+
+#index .introTitulo {
+  background-image: url("../Imagenes/fondo_ex_1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.introTitulo__principal {
+  color: rgb(255, 255, 255);
+  text-shadow: -3px -3px 4px rgba(0, 0, 0, 1);
+  text-align: center;
+  font-size: 3.063rem;
+}
+
+.introTitulo__parrafo{
+  color: white;
+  text-shadow: 3px 2px 3px rgba(255,255,255,.2), -3px 0px 2px #000000;
+  font-weight: bold;
+  padding: 0 30px 0 30px;
+  text-align: center;
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.cajaBoton__principal {
+  border: none;
+  color: $colorSecundario;
+  padding: 10px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.063rem;
+  cursor: pointer;
+  background-color: #111f4d !important;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border-radius: 30px;
+}
+
+.bienvenidos {
+  color: $colorPrincipal;
+  font-weight: bolder;
+  text-align: center;
+  margin: 15px;
+}
+
+.bienvenidos__parrafo{
+  color: $colorSecundario;
+  padding: 0 30px 30px 30px;
+  text-align: center;
+  text-shadow: 2px 0 8px #000000;
+}
+
+.integrales{
+  @extend .bienvenidos
+}
+
+.integrales__parrafo{
+  @extend .bienvenidos__parrafo
+}
+
+/*ESTILO SALA DE SERVIDORES */
+
+.grid-container-article {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+        "Article1"
+        "Article2"
+        "Article3"
+        "Article4";
+}
+
+.Article1 {
+  grid-area: Article1;
+}
+
+.Article2 {
+  grid-area: Article2;
+}
+
+.Article3 {
+  grid-area: Article3;
+}
+
+.Article4 {
+  grid-area: Article4;
+}
+
+#servidores .introTitulo {
+  background-image: url("../Imagenes/server.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.nosEncargamosTitulo{
+  @extend .bienvenidos
+}
+
+.nosEncargamosTexto{
+  @extend .bienvenidos__parrafo;
+  line-height: 40px;
+}
+
+.masSolicitadosTexto{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* ESTILO MANTENIMIENTO Y REPARACION DE PC */
+
+#pc .introTitulo {
+  background-image: url("../Imagenes/pc.jpg");
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+#pc .introTexto {
+  color: $colorSecundario;
+  text-shadow: -3px -3px 4px rgba(0, 0, 0, 1);
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.esPorEso{
+  @extend .nosEncargamosTitulo
+}
+
+.esPorEso__parrafo{
+  @extend .nosEncargamosTexto
+}
+
+.virusTeoria{
+  text-align: center;
+  font-size: 2rem;
+  padding: 40px;
+  color: $colorSecundario;
+  text-shadow: -3px -3px 4px rgba(0, 0, 0, 1);
+  font-weight: bolder;
+}
+/* ESTILO ELECTROTECNIA INDUSTRIAL */
+
+#electro .introTitulo {
+  background-image: url("../Imagenes/electrotecnia.jpg");
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+#electro .introTexto {
+  color: $colorSecundario;
+  text-shadow: -3px -3px 4px rgba(0, 0, 0, 1);
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.conNuestroServicios{
+  @extend .nosEncargamosTitulo
+}
+
+.conNuestroServicios__parrafo{
+  @extend .nosEncargamosTexto
+}
+
+/*ESTILO CONTACTO */
+
+#contacto .introTitulo {
+  background-image: url("../Imagenes/contacto.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#contacto .introTexto {
+  color: $colorSecundario;
+  text-shadow: -3px -3px 4px rgba(0, 0, 0, 1);
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+#fondoFormulario {
+  background-image: url(../Imagenes/fondoFormulario.jpg);
+  background-position: center;
+}
+
+.cajaFormulario__general{
+  background-color: $colorPrincipal;
+  color: $colorSecundario;
+}
+
+/*Import*/
+
+@import "_tablet";
+@import "_pc";
+
+
+
+
+
+

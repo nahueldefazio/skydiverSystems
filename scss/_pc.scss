@@ -1,0 +1,306 @@
+/*Variables*/
+
+$colorPrincipal: #111f4d;
+$colorSecundario: #f2f4f7;
+/* - PC - */
+
+@media only screen and (min-width: 1402px) {
+
+// Utilizo este "for" solo para el desafio entregable, ya que depues lo quitare de mi proyecto
+  @for $i from 1 through 4{
+
+    .Article#{$i}{
+      grid-area: Article#{$i};
+    }
+
+  }
+
+  .col-3{
+    flex: 0 0 40% !important;
+  }
+
+  .grid-container-menu {
+    height: 92.433px;
+  }
+
+  .Logo img {
+    padding-right: 20px;
+    width: 320px;
+    height: 50.433px;
+  }
+
+  .Inicio {
+    grid-area: Inicio;
+  }
+
+  .Servicios {
+    grid-area: Servicios;
+  }
+
+  .Contacto {
+    grid-area: Contacto;
+  }
+
+  .item {
+    width: 110px;
+    height: 30px;
+  }
+
+  .Contacto a {
+    width: 100px;
+    height: 30px;
+  }
+
+  .cajaBoton__principal {
+    color: $colorSecundario;
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 30px;
+  }
+
+  .introTitulo__principal {
+    font-size: 130px;
+  }
+
+  .grid-container-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 15px;
+    grid-template-areas:
+            "Instagram WhatsApp Facebook";
+  }
+
+  .Instagram {
+    grid-area: Instagram;
+  }
+
+  .WhatsApp {
+    grid-area: WhatsApp;
+  }
+
+  .Facebook {
+    grid-area: Facebook;
+  }
+
+  .grid-container-article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+            "Article1 Article2"
+            "Article3 Article4";
+  }
+
+  .bienvenidos{
+    font-size: 90px;
+  }
+
+  .bienvenidos__parrafo{
+    font-size: 30px;
+    padding-left:150px;
+    padding-right: 150px;
+    text-align: center;
+    color: $colorSecundario;
+  }
+  .integrales{
+    font-size: 50px;
+  }
+
+  .integrales__parrafo{
+    font-size: 25px;
+    padding-left:150px;
+    padding-right: 150px;
+    text-align: center;
+    color: $colorSecundario;
+    line-height : 75px;
+  }
+
+  header {
+    background-color: $colorSecundario;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+
+  footer {
+    background-color: $colorSecundario;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+  }
+
+  footer a:link {
+    color: black;
+    padding-right: 50px;
+  }
+
+  footer a:visited {
+    color: black;
+  }
+
+  .footer__img{
+    width: 30px;
+    height: 30px;
+  }
+
+  /* ESTILO INDEX */
+
+  #index .introTitulo {
+    background-image: url("../Imagenes/fondo_ex.jpg");
+    height: 600px;
+    background-position: center;
+  }
+
+  .introTitulo__parrafo {
+    color: $colorSecundario;
+    text-shadow: -3px -3px 4px rgba(0, 0, 0, 1);
+    text-align: center;
+    font-size: 50px;
+    margin-left: 200px;
+    margin-right: 200px;
+    line-height: 80px;
+  }
+
+  .cajaBoton {
+    border: none;
+    padding: 25px 35px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    cursor: pointer;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-radius: 30px;
+  }
+
+  .cajaBoton__principal:hover {
+    background-color: $colorPrincipal;
+    color: $colorSecundario;
+  }
+
+  #bienvenidosTexto {
+    font-weight: bolder;
+  }
+
+  #cajaIndex {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  #integralesTexto {
+    color: $colorSecundario;
+    margin-top: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    line-height: 70px;
+  }
+
+
+  /*ESTILO SALA DE SERVIDORES */
+
+  #nosEncargamosTexto {
+    padding: 50px;
+    line-height: 70px;
+  }
+
+  #masSolicitadosTexto {
+    font-weight: bold;
+    color: #000000;
+    text-shadow: 18px 31px 5px rgba(255, 255, 255, 0.8);
+
+  }
+
+  #servidores .introTitulo {
+    background-image: url("../Imagenes/server.jpg");
+    height: 500px;
+    background-repeat: no-repeat;
+  }
+
+  #servidores .introTexto {
+    color: $colorSecundario;
+    text-shadow: -3px -3px 4px rgba(0, 0, 0, 1);
+    text-align: center;
+    font-size: 30px;
+    padding-top: 30px;
+    padding-left: 250px;
+    padding-right: 250px;
+    line-height: 65px;
+  }
+
+  /* ESTILO MANTENIMIENTO Y REPARACION DE PC */
+  #pc .introTitulo {
+    background-image: url("../Imagenes/pc.jpg");
+    height: 1300px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  #pc .introTexto {
+    color: $colorSecundario;
+    text-shadow: -3px -3px 4px rgba(0, 0, 0, 1);
+    text-align: center;
+    font-size: 30px;
+    line-height: 65px;
+  }
+
+  /* ESTILO ELECTROTECNIA INDUSTRIAL */
+
+  #electro .introTitulo {
+    background-image: url("../Imagenes/electrotecnia.jpg");
+    height: 715px;
+    background-position: center;
+  }
+
+  #electro .introTexto {
+    color: $colorSecundario;
+    text-shadow: -3px -3px 4px rgba(0, 0, 0, 1);
+    text-align: center;
+    font-size: 30px;
+    line-height: 65px;
+  }
+
+  /*ESTILO CONTACTO */
+  #contacto .introTitulo {
+    background-image: url("../Imagenes/contacto.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  #contacto {
+    .introTexto {
+      color: $colorSecundario;
+      text-shadow: -3px -3px 4px rgba(0, 0, 0, 1);
+      text-align: center;
+      font-size: 30px;
+    }
+  }
+
+  .cajaFormulario--centrado{
+    width: 500px;
+  }
+  .cajaFormulario{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+  }
+
+  #fondoFormulario {
+    background-image: url(../Imagenes/fondoFormulario.jpg);
+    background-position: center;
+  }
+
+  video {
+    height: 400px;
+    width: 600px;
+  }
+
+}

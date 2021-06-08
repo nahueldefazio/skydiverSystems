@@ -1,14 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio de Git</title>
+    <meta name="description" content="Este es un sitio web dedicado a soluciones informaticas">
+    <meta name="keywords" content="PC, MANTENIMIENTO, IT, SOLUCIONES, SERVER, ELECTROTECNIA">
+    <title> Skydiver Systems</title>
+    <link rel="stylesheet" href="css/main.css">
+    <!--Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!--End Bootstrap CSS-->
+
+    <!-- Comienzo de fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap" rel="stylesheet">
+    <!--Fin de fonts-->
+
+
 </head>
-<body>
-    <h1>- Clase 14 -</h1>
-    <p>Agrego un texto de ejemplo "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, nisi tenetur inventore, nesciunt accusantium iure expedita, vitae officia ab voluptatem distinctio. Perspiciatis ipsa incidunt recusandae eaque, id reprehenderit repellendus fugit!"</p>
-    
+
+<body id="index">
+<header>
+    <span class="header--left"> EMAILS: nahuel1116@gmail.com </span>
+    <span class="header--right"> NROS DE CONTACTO: +(54)11-5956-0376</span>
+    <div class="header--clear"></div>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="index.html"><img class="Logo" src="Imagenes/logo.png"  alt="Skydiver Systems"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">INICIO <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    SERVICIOS
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="ventanas/servidores.html">Sala de servidores</a>
+                    <a class="dropdown-item" href="ventanas/pc.html">Mantenimiento y
+                        reparacion de pcs</a>
+                    <a class="dropdown-item" href="ventanas/electrotecnia.html">Electrotecnia</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="ventanas/contacto.html">CONTACTO</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+    <div class="introTitulo">
+        <h1 class="introTitulo__principal">Skydiver Systems</h1>
+        <p class="introTitulo__parrafo">Estas buscando un suporte de IT para tu empresa y/o domiciolio? Entonces estas
+            en el
+            sitio web correcto.</p>
+        <div class="cajaBoton">
+            <!-- Button trigger modal -->
+            <button type="button" class="cajaBoton__principal " data-toggle="modal"
+                    data-target="#contactoFormularioModal">
+                Contactenos
+            </button>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="contactoFormularioModal" tabindex="-1" role="dialog"
+             aria-labelledby="#contactoFormularioModal" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="contactoFormulario">Formulario de contacto</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="tipoServicio">Tipo de servicio: </label>
+                                <select class="form-control" id="tipoServicio">
+                                    <option> -- SELECCIONE UN SERVICIO --</option>
+                                    <option value="1">Sala de servidores</option>
+                                    <option value="2">Mantenimiento y reparacion de PCs</option>
+                                    <option value="3">Electrotecnia industrial</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email: </label>
+                                <input type="email" class="form-control" id="email"
+                                       aria-describedby="emailHelp" placeholder="Enter email">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                    anyone else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="nombreApellido">Nombre y apellido: </label>
+                                <input type="text" class="form-control" id="nombreApellido"
+                                       aria-describedby="nombreAyuda" placeholder="Ej: Juan Perez">
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono">Telefono: </label>
+                                <input type="number" class="form-control" id="telefono"
+                                       aria-describedby="nombreAyuda" placeholder="Ej: 11-0000-0000">
+                            </div>
+                            <div class="form-group">
+                                <label for="areaTexto">Comentarios: </label>
+                                <textarea class="form-control" id="areaTexto" rows="5"></textarea>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="reset" class="btn btn-secondary" value="Limpiar formulario">
+                            <button type="button" class="btn btn-primary">Enviar formulario</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- <button id="botonIndex"><a href="ventanas/contacto.html">Contactenos </a></button> -->
+    </div>
+    <h2 class="bienvenidos"> - Bienvenidos -</h2>
+    <p class="bienvenidos__parrafo">Skydiver Systems fue creado desdo 1998 por Jorge De Fazio, dedicada al soporte
+        informatico y tecnologico.</p>
+    <h3 class="integrales">Servicios informaticos integrales</h3>
+    <p class="integrales__parrafo">Nuestro objetivo principal es lograr que nuestros clientes sean más competitivos y
+        exitosos. Todo esto
+        mediante el mas bajo presupuesto posible, en el mercado. Nos unimos a ellos y planeamos a corto, mediano y
+        largo plazo el desarrollo y la optimización de su
+        plataforma informática previniendo los problemas en sus computadoras antes que sucedan, haciendo un
+        mantenimiento
+        real sobre los equipos, a través de visitas periódicas de rutina y visitas ilimitadas por eventos</p>
+
+    <div class="row cajaArticulo">
+        <div class="col-3 articulo">
+            <a href="ventanas/sala_de_servidores.html">
+                <article class="Article1 articulo__salaServer">
+                    <img src="Imagenes/icono_server.png" alt="Server" width="70" height="70">
+                    <h4 class="articulo__titulo">Sala de servidores</h4>
+                    <p class="articulo__parrafo">Proteccion y gestion de energia para salas de servidores. </p>
+                </article>
+            </a>
+        </div>
+        <div class="col-3 articulo">
+            <a href="ventanas/mantenimiento_y_reparacion_de_pc.html">
+                <article class="Article2  articulo__mantenimientoPc">
+                    <img src="Imagenes/icono_pc.png" alt="PC" width="70" height="70">
+                    <h4 class="articulo__titulo">Mantenimiento y reparacion de PCs</h4>
+                    <p class="articulo__parrafo">Soporte informático para sus computadoras, tanto en hardware como en
+                        software.</p>
+                </article>
+            </a>
+        </div>
+        <div class="col-3 articulo">
+            <a href="ventanas/electrotecnia_industrial.html">
+                <article class="Article3  articulo__electrotecnia">
+                    <img src="Imagenes/icono_electrotecnio.png" alt="Electrotecnia" width="70" height="70">
+                    <h4 class="articulo__titulo">Electrotecnia industrial</h4>
+                    <p class="articulo__parrafo">Lorem, ipsum dolor sit amet consectetur adipisicing</p>
+                </article>
+            </a>
+        </div>
+    </div>
+
+
+</main>
+<footer class="grid-container-footer">
+    <a href="https://www.facebook.com/" target="_blank"> Facebook
+        <img src="Imagenes/icono_facebook.svg" alt="facebook" width="30" height="30">
+    </a>
+    <a href="https://www.instagram.com/" target="_blank"> Instagram
+        <img src="Imagenes/icono_instagram.svg" alt="instagram" width="30" height="30">
+    </a>
+    <a href="https://wa.me/5491159560376" target="_blank"> WhatsApp
+        <img src="Imagenes/whatsapp.svg" alt="whatsapp" width="30" height="30">
+    </a>
+</footer>
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
 </body>
+
 </html>
