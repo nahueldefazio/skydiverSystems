@@ -1,7 +1,7 @@
 {
-  "name": "proyecto",
+  "name": "Skydiver Systems",
   "version": "1.0.0",
-  "description": "",
+  "description": "Sitio web diseñado al mantenimento electronico y tecnologico",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
