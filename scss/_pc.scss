@@ -297,7 +297,9 @@ $colorSecundario: #f2f4f7;
     background-image: url(../Imagenes/fondoFormulario.jpg);
     background-position: center;
   }
-
+  .cajaFormulario__general{
+    border-radius: 6px;
+  }
   video {
     height: 400px;
     width: 600px;
