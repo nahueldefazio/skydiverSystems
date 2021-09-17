@@ -66,40 +66,42 @@
     </div>
     <div id="fondoFormulario">
         <div class="cajaFormulario">
-            <form class="cajaFormulario__general cajaFormulario--centrado" action="#" method='GET'>
+            <form class="cajaFormulario__general cajaFormulario--centrado" action="https://formsubmit.co/nahuel1116@gmail.com" method='POST'>
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="tipoServicio">Tipo de servicio: </label>
-                        <select class="form-control" id="tipoServicio">
+                        <select class="form-control" id="tipoServicio" name="Servicio">
                             <option> -- SELECCIONE UN SERVICIO --</option>
-                            <option value="1">Sala de servidores</option>
-                            <option value="2">Mantenimiento y reparacion de PCs</option>
-                            <option value="3">Electrotecnia industrial</option>
+                            <option value="Sala de servidores">Sala de servidores</option>
+                            <option value="Mantenimiento y reparacion de PCs">Mantenimiento y reparacion de PCs</option>
+                            <option value="Electrotecnia industrial">Electrotecnia industrial</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="email">Email: </label>
                         <input type="email" class="form-control" id="email"
-                               aria-describedby="emailHelp" placeholder="Enter email">
+                               aria-describedby="emailHelp" placeholder="Enter email"
+                               name="Email">
                     </div>
                     <div class="form-group">
                         <label for="nombreApellido">Nombre y apellido: </label>
                         <input type="text" class="form-control" id="nombreApellido"
-                               aria-describedby="nombreAyuda" placeholder="Ej: Juan Perez">
+                               aria-describedby="nombreAyuda" placeholder="Ej: Juan Perez"  name="Nombre_Apellido">
                     </div>
                     <div class="form-group">
                         <label for="telefono">Telefono: </label>
-                        <input type="number" class="form-control" id="telefono"
-                               aria-describedby="nombreAyuda" placeholder="Ej: 11-0000-0000">
+                        <input type="number" class="form-control" id="telefono" max="9999999999"
+                               aria-describedby="nombreAyuda" placeholder="Ej: 11-0000-0000" name="Telefono">
                     </div>
                     <div class="form-group">
                         <label for="areaTexto">Comentarios: </label>
-                        <textarea class="form-control" id="areaTexto" rows="5"></textarea>
+                        <textarea class="form-control" id="areaTexto" rows="5" name="Comentarios"></textarea>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <input type="reset" class="btn btn-secondary" value="Limpiar formulario">
-                    <button type="button" class="btn btn-primary">Enviar formulario</button>
+                    <button type="submit" class="btn btn-primary">Enviar formulario</button>
+
                 </div>
             </form>
         </div>
